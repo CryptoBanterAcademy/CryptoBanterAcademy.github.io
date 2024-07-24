@@ -261,7 +261,7 @@
         document.getElementById('generate-payment').addEventListener('click', async function() {
             
             const paymentCoin = document.getElementById('payment-coin').value;
-            const amountUSD = 100; // Fixed amount in USD
+            const amountUSD = 200; // Fixed amount in USD
 
             const exchangeRates = await fetchExchangeRates();
 
@@ -306,7 +306,7 @@
                     break;
                 case 'bnb-bep20':
                     btcAddress = '0xd84eEd570a71a4291CCe5b272DA9036f884e3B29';
-                    paymentMessage = 'Please send the equivalent of $100 in BNB (BEP20) to the following address:';
+                    paymentMessage = 'Please send the equivalent of $200 in BNB (BEP20) to the following address:';
                     cryptoAmount = amountUSD / exchangeRates.bnb;
                     document.getElementById('qr-bnb-bep20').style.display = 'block';
                     break;
