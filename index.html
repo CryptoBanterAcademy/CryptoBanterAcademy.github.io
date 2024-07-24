@@ -6,32 +6,30 @@
     <title>Crypto Banter School</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #0e1e25;
             color: #ffffff;
+            line-height: 1.6;
         }
         header {
             background-color: #12232e;
-            color: white;
-            padding: 1rem 0;
+            padding: 1rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         nav .logo img {
             height: 50px;
-            padding: 10px;
+            padding: 5px;
             background-color: #4da8da;
             border-radius: 5px;
         }
         nav ul {
             list-style: none;
-            padding: 0;
             display: flex;
             margin: 0;
-            margin-right: 20px;
         }
         nav ul li {
             margin: 0 1rem;
@@ -40,25 +38,36 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #4da8da;
         }
         .hero {
             background-color: #203647;
             color: white;
-            padding: 3rem 1rem;
+            padding: 3rem 2rem;
             text-align: center;
         }
         .hero h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            letter-spacing: 1px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-top: 1rem;
         }
         .courses {
-            padding: 2rem 1rem;
+            padding: 2rem 2rem;
             background-color: #4da8da;
             color: #000;
         }
         .courses h2 {
             text-align: center;
+            font-size: 2rem;
             margin-bottom: 2rem;
+            color: #12232e;
         }
         .course-container {
             display: flex;
@@ -69,44 +78,51 @@
             background-color: #ffffff;
             color: #000000;
             margin: 1rem;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 5px;
             width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-10px);
         }
         .course-card h3 {
             margin-top: 0;
+            color: #12232e;
         }
         .course-card p {
             flex-grow: 1;
         }
-        .course-card button {
+        .course-card a.button {
             background-color: #f26d22;
             color: white;
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
             font-size: 1rem;
             font-weight: bold;
             margin-top: 1rem;
             border-radius: 5px;
-            cursor: pointer;
+            display: block;
+            transition: background-color 0.3s ease;
         }
-        .course-card button:hover {
+        .course-card a.button:hover {
             background-color: #d4551a;
         }
         .exchanges {
             background-color: #203647;
-            padding: 2rem 1rem;
+            padding: 2rem 2rem;
             text-align: center;
         }
         .exchanges h2 {
             margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #ffffff;
         }
         .exchange-logos {
             display: flex;
@@ -115,13 +131,17 @@
         }
         .exchange-logos img {
             height: 50px;
-            margin: 0.5rem;
+            margin: 0.5rem 1rem;
+            transition: transform 0.3s ease;
+        }
+        .exchange-logos img:hover {
+            transform: scale(1.1);
         }
         footer {
             background-color: #12232e;
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1rem 2rem;
         }
         .footer-links {
             margin: 1rem 0;
@@ -130,6 +150,10 @@
             color: white;
             margin: 0 1rem;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #4da8da;
         }
     </style>
 </head>
@@ -149,27 +173,27 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Welcome to Crypto Banter Academy</h1>
+            <h1>Crypto Banter Academy</h1>
             <p>Your gateway to mastering cryptocurrency.</p>
         </section>
         <section class="courses">
             <h2>Featured Courses</h2>
             <div class="course-container">
                 <div class="course-card">
-                    <h3>Course Title 1</h3>
-                    <p>Course description...</p>
-                    <button>Learn More</button>
+                    <h3>Weekly Updates Subscription</h3>
+                    <p>Stay ahead of the curve with our weekly updates! Subscribe now to receive the latest insights, strategies, and tips directly to your inbox. Each week, we’ll cover key topics, new developments in the cryptocurrency world, and practical advice to enhance your learning experience. Whether you're a beginner or an advanced learner, our updates will help you stay informed and engaged...</p>
+                    <a href="premium.html" class="button">Learn More</a>
                 </div>
                 <div class="course-card">
-                    <h3>Course Title 2</h3>
-                    <p>Course description...</p>
-                    <button>Learn More</button>
+                    <h3>Daily Updates</h3>
+                    <p>Immerse yourself in the latest trends and developments in the cryptocurrency world with our daily updates. This subscription offers you the freshest news, in-depth analysis, and critical insights every day, ensuring you're always at the forefront of the market. Ideal for enthusiasts and professionals alike, these daily updates keep you informed and prepared to navigate the fast-paced crypto environment...</p>
+                    <a href="premium plus.html" class="button">Learn More</a>
                 </div>
                 <!-- Add more course cards as needed -->
             </div>
         </section>
         <section class="exchanges">
-            <h2></h2>
+            <h2>Supported Exchanges</h2>
             <div class="exchange-logos">
                 <img src="https://school.cryptobanter.com/assets/sponsors/Banter%20Bubbles%20Logo%20(black%20text)%203.png" alt="Exchange 1">
                 <img src="https://school.cryptobanter.com/assets/sponsors/KFI_Wordmark%20-%20Black.png" alt="Exchange 2">
